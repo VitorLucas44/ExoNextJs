@@ -16,14 +16,34 @@ export default function Home() {
       </Head>
 
       <header>
-        <nav></nav>
+        <nav>
+          <img/>
+          <a href="">Home</a>
+          <a href="/events">Event</a>
+          <a href="/about-us">About us</a>
+        </nav>
       </header>
 
 
       <main className={styles.main}>
-
+        <a href="">
+        <img/>
+        <h2>Event in London</h2>
+        
+          </a>
+          <a href="">
+        <img/>
+        <h2>Event in San Fransico</h2>
+        
+          </a>
+          <a href="">
+        <img/>
+        <h2>Event in Barcelona</h2>
+        
+          </a>
       </main>
       <footer className={styles.footer}>
+        <p> @Copyright - Vitor Exo JS</p>
 
       </footer>
       </div>
