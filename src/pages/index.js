@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link';
+import { HomePage } from '../components/home/home-page';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,7 +31,7 @@ export default function Home({ data }) {
         </nav>
       </header>
 
-
+{/* 
       <main className={styles.main}>
         {data.map(ev => 
         <Link legacyBehavior key={ev.id} href={`/events/${ev.id}` } passHref>
@@ -41,7 +42,8 @@ export default function Home({ data }) {
         </a>
         </Link>
         ) }
-      </main>
+      </main> */}
+      <HomePage data={data}/>
       <footer className={styles.footer}>
         <p> @Copyright - Vitor Exo JS</p>
 
