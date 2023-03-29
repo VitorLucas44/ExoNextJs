@@ -4,7 +4,7 @@ export const Header = () => {
     return (
         <header>
         <nav>
-            <Link legacyBehavior href="" passHref>
+            <Link legacyBehavior href="/" passHref>
             <a>Home</a>
             </Link>
             <Link legacyBehavior href="/events" passHref>
