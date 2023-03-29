@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,37 +18,29 @@ export default function Home({ data }) {
 
       <header>
         <nav>
-          <img/>
-          <a href="">Home</a>
-          <a href="/events">Event</a>
-          <a href="/about-us">About us</a>
+          <Link legacyBehavior href="" passHref>
+          <a>Home</a>
+          </Link>
+          <Link legacyBehavior href="/events" passHref>
+          <a>Event</a>
+          </Link>
+          <Link legacyBehavior href="/about-us" passHref>
+          <a>About us</a>
+          </Link>
         </nav>
       </header>
 
 
       <main className={styles.main}>
         {data.map(ev => 
-        <a key={ev.id} href={`/events/${ev.id}` }> 
+        <Link legacyBehavior key={ev.id} href={`/events/${ev.id}` } passHref>
+        <a> 
         <Image width={200} height={200} alt={ev.title} src={ev.image}></Image> 
         <h2>{ev.title}</h2> 
         <p> {ev.description}</p> 
         </a>
+        </Link>
         ) }
-        <a href="/events/london">
-        <img/>
-        <h2>Event in London</h2>
-        
-          </a>
-          <a href="/events/sanfran">
-        <img/>
-        <h2>Event in San Fransico</h2>
-        
-          </a>
-          <a href="/events/barcelona">
-        <img/>
-        <h2>Event in Barcelona</h2>
-        
-          </a>
       </main>
       <footer className={styles.footer}>
         <p> @Copyright - Vitor Exo JS</p>
